@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import ReactMarkdown from "react-markdown"; // Añade esta línea
+import ReactMarkdown from "react-markdown"; 
 
 export default function Home() {
   const [ingredientes, setIngredientes] = useState("");

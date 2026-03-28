@@ -7,9 +7,9 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { ingredientes } = body;
 
-    // 2. Nos conectamos a Gemini usando tu clave secreta
+    // 2. Nos conectamos a Gemini usando clave secreta
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
-    // Usamos el modelo "gemini-1.5-flash", que es rapidísimo e ideal para esto
+    // Usamos el modelo "gemini-2.5-flash", que es rapidísimo e ideal para esto
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     // 3. Escribimos las instrucciones secretas para la IA (El Prompt)
