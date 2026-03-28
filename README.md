@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍳 ¿Qué cocinamos hoy? - Generador de Recetas con IA
 
-## Getting Started
+Una aplicación web minimalista y rápida que resuelve el problema diario de qué cocinar con los ingredientes disponibles en casa. Utiliza Inteligencia Artificial para generar recetas estructuradas, optimizando el tiempo y reduciendo el desperdicio de alimentos.
 
-First, run the development server:
+🔗 **[Prueba la aplicación en vivo aquí](https://que-cocinar-app.vercel.app/)**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Características Principales
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Generación Inteligente:** Integración con la API de Google Gemini (modelo 2.5) para procesar lenguaje natural y devolver recetas coherentes basadas en ingredientes aleatorios o específicos.
+* **Interfaz Minimalista y Responsiva:** Diseño limpio enfocado en la experiencia del usuario (UX), con estados de carga claros e interactividad fluida.
+* **Formateo Dinámico:** Renderizado de texto en formato Markdown (`react-markdown`) con estilos tipográficos de alto contraste para garantizar una legibilidad perfecta en cualquier dispositivo.
+* **Despliegue Continuo (CI/CD):** Configurado con Vercel para integraciones y despliegues automáticos desde GitHub.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tecnologías Utilizadas
 
-## Learn More
+* **Frontend & Backend:** Next.js (App Router) con React.
+* **Estilos:** Tailwind CSS (v4) para un diseño de utilidades rápido y moderno.
+* **Inteligencia Artificial:** Google Generative AI SDK (Gemini 2.5).
+* **Infraestructura:** Desplegado en Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+## ⚙️ Instalación Local
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Si deseas correr este proyecto en tu propia máquina, sigue estos pasos:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  **Clona el repositorio:**
+    ```bash
+    git clone [https://github.com/](https://github.com/MarceloMarchantG/que-cocinar-app.git)
+    cd que-cocinar-app
+    ```
 
-## Deploy on Vercel
+2.  **Instala las dependencias:**
+    ```bash
+    npm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3.  **Configura las variables de entorno:**
+    Crea un archivo `.env.local` en la raíz del proyecto y agrega tu clave de API de Google AI Studio:
+    ```env
+    GEMINI_API_KEY=tu_clave_secreta_aqui
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4.  **Inicia el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+    Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
+
+---
+
+## 👨‍💻 Sobre el Autor
+
+**Marcelo Marchant*
+*Desarrollador y profesional enfocado en la optimización de procesos mediante el uso de tecnología y análisis de datos.*
+
+* [Mi perfil de GitHub](https://github.com/MarceloMarchantG)
+* [Mi LinkedIn](www.linkedin.com/in/marcelo-marchant-gangas)
