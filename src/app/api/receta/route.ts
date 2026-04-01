@@ -16,14 +16,14 @@ export async function POST(request: Request) {
     const prompt = `
       Actúa como un chef experto y amigable. 
       El usuario tiene los siguientes ingredientes: ${ingredientes}.
-      Crea una receta deliciosa y fácil de preparar usando la mayoría o todos estos ingredientes. 
+      Crea una receta local deliciosa y fácil de preparar usando la mayoría o todos estos ingredientes. 
       Devuelve la respuesta con el siguiente formato estricto:
       - Título de la receta
       - Lista de ingredientes (con cantidades aproximadas)
       - Instrucciones paso a paso.
-      No agregues introducciones largas, ve directo a la receta.
-    `;
-
+      Importante: No uses frases introductorias, ve directo a la receta.
+      La PRIMERA línea de tu respuesta debe ser el nombre de la receta, obligatoriamente formateado como un Título 1 de Markdown (empezando con '# ').`;
+    
     // 4. Enviamos el mensaje a la IA y esperamos la respuesta
     const result = await model.generateContent(prompt);
     const respuestaTexto = result.response.text();
